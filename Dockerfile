@@ -2,5 +2,5 @@ From tomcat:latest
 Maintainer Sudhakar
 RUN apt-get update
 WORKDIR /usr/local/tomcat
-ADD hello.html /usr/local/tomcat/webapps/
-EXPOSE 8085
+ADD ${JENKINS_HOME}/workspace/sample_test/target/*.jar /usr/local/tomcat/webapps/
+EXPOSE 9085
